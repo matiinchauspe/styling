@@ -1,0 +1,53 @@
+@use "src/styles/variables" as v;
+
+.button {
+  color: v.$white;
+  font-size: 19px;
+  width: 310px;
+  height: 70px;
+  background-color: v.$primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  letter-spacing: -0.5px;
+  border: 1px solid invisible;
+  transition: all ease-in-out 0.5s;
+  &:hover {
+    border: 1px solid v.$white;
+    background-color: v.$secondary-color;
+  }
+}
+
+.iconVariant {
+  gap: 15px;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  line-height: 24px;
+  text-align: start;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.defaultVariant {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.disabled {
+  background-color: v.$gray;
+  pointer-events: none;
+  cursor: normal;
+  &:hover {
+    cursor: normal;
+    background-color: v.$gray;
+  }
+}

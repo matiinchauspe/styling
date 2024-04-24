@@ -1,0 +1,49 @@
+@use "src/styles/variables" as v;
+
+.container {
+  background-color: v.$primary-color;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto;
+  max-width: 1680px;
+  padding: 80px 60px 60px 60px;
+}
+
+.closeIcon {
+  color: v.$white;
+  position: absolute;
+  right: 60px;
+  top: 50px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.br {
+  border: 1px solid v.$white;
+  margin: 30px 0 50px 0;
+  opacity: 0.2;
+  width: 100%;
+}
+
+.title {
+  color: v.$white;
+  display: flex;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 66px;
+  margin: 0;
+}
+
+@media only screen and (max-width: 930px) {
+  .title {
+    font-size: 40px;
+    justify-content: center;
+    line-height: 44px;
+  }
+
+  .closeIcon {
+    display: none;
+  }
+}

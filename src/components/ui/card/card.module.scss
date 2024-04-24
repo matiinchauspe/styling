@@ -1,0 +1,10 @@
+@use "src/styles/variables" as v;
+
+.card {
+  min-width: 364px;
+  background-color: v.$white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
