@@ -1,18 +1,22 @@
 @use "src/styles/variables" as v;
 
 .button {
-  color: v.$white;
-  font-size: 19px;
-  width: 310px;
-  height: 70px;
-  background-color: v.$primary-color;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  border-radius: 50px;
-  letter-spacing: -0.5px;
+  background-color: v.$primary-color;
   border: 1px solid invisible;
+  border-radius: 50px;
+  color: v.$white;
+  display: flex;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 19px;
+  height: 70px;
+  justify-content: center;
+  letter-spacing: -0.5px;
+  padding: 0.6em 1.2em;
   transition: all ease-in-out 0.5s;
+  width: 310px;
+
   &:hover {
     border: 1px solid v.$white;
     background-color: v.$secondary-color;
@@ -24,17 +28,16 @@
 }
 
 .text {
-  display: flex;
   align-items: center;
-  height: 100%;
-  width: 100%;
-  line-height: 24px;
-  text-align: start;
-  overflow: hidden;
-  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  height: 100%;
+  line-height: 24px;
+  overflow: hidden;
+  text-align: start;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 
 .defaultVariant {
@@ -49,5 +52,68 @@
   &:hover {
     cursor: normal;
     background-color: v.$gray;
+  }
+}
+
+// media query proportional to the design
+@media only screen and (max-width: 1600px) {
+  .button {
+    width: 280px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .button {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 1260px) {
+  .button {
+    width: 220px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  .button {
+    width: 200px;
+    height: 60px;
+    font-size: 14px;
+  }
+
+  .text {
+    line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .button {
+    width: 180px;
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .text {
+    line-height: 15px;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .button {
+    width: 150px;
+    height: 50px;
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .button {
+    width: 120px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .text {
+    line-height: 12px;
   }
 }
