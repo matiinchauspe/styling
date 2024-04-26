@@ -2,22 +2,17 @@
 
 .container {
   background-color: v.$primary-color;
-  position: relative;
   display: flex;
   flex-direction: column;
+  height: 1014px;
   margin: 100px auto;
   max-width: 1680px;
   padding: 80px 60px 60px 60px;
+  position: relative;
 }
 
-.closeIcon {
-  color: v.$white;
-  position: absolute;
-  right: 60px;
-  top: 50px;
-  &:hover {
-    cursor: pointer;
-  }
+.header {
+  display: block;
 }
 
 .br {
@@ -36,6 +31,16 @@
   margin: 0;
 }
 
+.closeIcon {
+  color: v.$white;
+  position: absolute;
+  right: 60px;
+  top: 50px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 @media only screen and (max-width: 930px) {
   .title {
     font-size: 40px;
@@ -45,5 +50,11 @@
 
   .closeIcon {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 1670px) {
+  .header {
+    padding: 0 0.4em;
   }
 }
